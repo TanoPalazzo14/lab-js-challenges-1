@@ -13,33 +13,58 @@ const repeatedWords = [
   "matter"
 ];
 
-function howManyTimes() {}
-
-
-
+function howManyTimes(array,wordToSearch) {
+  let counter = 0
+  for (i=0 ; i<array.length ; i++){
+    if (array[i] === wordToSearch){
+      counter++;
+    }
+  }
+  return counter
+}
 
 // Iteration 2 | Number Sequence
-function createSequence() {}
-
-
-
-
+function createSequence(num) {
+  const secuencia = []
+  if (num === 0){
+    return secuencia
+  }
+  for (i=0 ; i<=num ; i++){
+    secuencia.push(i)
+    console.log(secuencia)
+  }
+  return secuencia
+}
 // Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyBy() {}
-
-
-
-
+function multiplyBy(numeros,multiplicador) {
+  const multiplicados = []
+  for (i=0 ; i<numeros.length ; i++){
+    multiplicados.push(numeros[i]*multiplicador)
+  }
+  return multiplicados
+}
 // Iteration 4 | Filter Out
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
-
-
-
+function filterOut(inicial, filtro) {
+  if (inicial.length===0){
+    return null
+  }
+  for (i=0 ; i<inicial.length ; i++){
+    console.log(i,inicial[i])
+    for (j=0 ; j<filtro.length ; j++){
+      console.log(j,filtro[j])
+      console.log(inicial)
+      if (inicial[i]===filtro[j]){
+        inicial.splice(i,1)
+      }
+    }
+  }
+  return inicial
+}
 
 // Iteration 5 | Unique Arrays
 const duplicateWords = [
